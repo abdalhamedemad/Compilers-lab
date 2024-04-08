@@ -1,102 +1,39 @@
 {
-    "startingState": "S12",
+    "startingState": "S0",
     "states": {
         "S0": {
             "state_id": 0,
             "isTerminatingState": false,
             "Transitions": {
-                "a": "S1"
+                "[A-Za-z]": "S1"
             }
         },
         "S1": {
             "state_id": 1,
             "isTerminatingState": false,
             "Transitions": {
-                "e": "S5"
+                "e1": "S2",
+                "e2": "S0"
             }
         },
         "S2": {
             "state_id": 2,
             "isTerminatingState": false,
             "Transitions": {
-                "b": "S3"
+                "[0-9]": "S3",
+                "e": "S4"
             }
         },
         "S3": {
             "state_id": 3,
             "isTerminatingState": false,
             "Transitions": {
-                "e": "S5"
+                "e1": "S4",
+                "e2": "S2"
             }
         },
         "S4": {
             "state_id": 4,
-            "isTerminatingState": false,
-            "Transitions": {
-                "e1": "S2",
-                "e2": "S0"
-            }
-        },
-        "S5": {
-            "state_id": 5,
-            "isTerminatingState": false,
-            "Transitions": {
-                "e": "S9"
-            }
-        },
-        "S6": {
-            "state_id": 6,
-            "isTerminatingState": false,
-            "Transitions": {
-                "c": "S7"
-            }
-        },
-        "S7": {
-            "state_id": 7,
-            "isTerminatingState": false,
-            "Transitions": {
-                "e": "S9"
-            }
-        },
-        "S8": {
-            "state_id": 8,
-            "isTerminatingState": false,
-            "Transitions": {
-                "e1": "S6",
-                "e2": "S4"
-            }
-        },
-        "S9": {
-            "state_id": 9,
-            "isTerminatingState": false,
-            "Transitions": {
-                "e": "S13"
-            }
-        },
-        "S10": {
-            "state_id": 10,
-            "isTerminatingState": false,
-            "Transitions": {
-                "d": "S11"
-            }
-        },
-        "S11": {
-            "state_id": 11,
-            "isTerminatingState": false,
-            "Transitions": {
-                "e": "S13"
-            }
-        },
-        "S12": {
-            "state_id": 12,
-            "isTerminatingState": false,
-            "Transitions": {
-                "e1": "S10",
-                "e2": "S8"
-            }
-        },
-        "S13": {
-            "state_id": 13,
             "isTerminatingState": true,
             "Transitions": {}
         }
