@@ -5,35 +5,77 @@
             "state_id": 0,
             "isTerminatingState": false,
             "Transitions": {
-                "[A-Za-z]": "S1"
+                "e": "S5"
             }
         },
         "S1": {
             "state_id": 1,
             "isTerminatingState": false,
             "Transitions": {
-                "e1": "S2",
-                "e2": "S0"
-            }
-        },
-        "S2": {
-            "state_id": 2,
-            "isTerminatingState": false,
-            "Transitions": {
-                "[0-9]": "S3",
-                "e": "S4"
+                "A": "S2"
             }
         },
         "S3": {
             "state_id": 3,
             "isTerminatingState": false,
             "Transitions": {
-                "e1": "S4",
-                "e2": "S2"
+                "B": "S4"
+            }
+        },
+        "S5": {
+            "state_id": 5,
+            "isTerminatingState": false,
+            "Transitions": {
+                "e1": "S1",
+                "e2": "S3",
+                "e": "S7"
+            }
+        },
+        "S6": {
+            "state_id": 6,
+            "isTerminatingState": false,
+            "Transitions": {
+                "e1": "S7",
+                "e2": "S5"
+            }
+        },
+        "S2": {
+            "state_id": 2,
+            "isTerminatingState": false,
+            "Transitions": {
+                "e": "S6"
             }
         },
         "S4": {
             "state_id": 4,
+            "isTerminatingState": false,
+            "Transitions": {
+                "e": "S6"
+            }
+        },
+        "S8": {
+            "state_id": 8,
+            "isTerminatingState": false,
+            "Transitions": {
+                "C": "S9"
+            }
+        },
+        "S9": {
+            "state_id": 9,
+            "isTerminatingState": false,
+            "Transitions": {
+                "D": "S10"
+            }
+        },
+        "S7": {
+            "state_id": 7,
+            "isTerminatingState": false,
+            "Transitions": {
+                "e": "S8"
+            }
+        },
+        "S10": {
+            "state_id": 10,
             "isTerminatingState": true,
             "Transitions": {}
         }
