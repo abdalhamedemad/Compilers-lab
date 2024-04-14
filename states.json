@@ -2,17 +2,139 @@
     "startingState": "S0",
     "S0": {
         "isTerminatingState": false,
-        "a": "S1"
+        "\u03b57": "S1"
     },
     "S1": {
         "isTerminatingState": false,
-        "\u03b5": "S2"
+        "\u03b5654": "S2"
     },
     "S2": {
         "isTerminatingState": false,
-        "b": "S3"
+        "\u03b5654": "S25"
     },
     "S3": {
+        "isTerminatingState": false,
+        "\u03b5654": "S11"
+    },
+    "S4": {
+        "isTerminatingState": false,
+        "\u03b5654": "S5"
+    },
+    "S5": {
+        "isTerminatingState": false,
+        "A": "S6"
+    },
+    "S6": {
+        "isTerminatingState": false,
+        "B": "S7"
+    },
+    "S7": {
+        "isTerminatingState": false,
+        "E": "S8"
+    },
+    "S9": {
+        "isTerminatingState": false,
+        "C": "S10"
+    },
+    "S11": {
+        "isTerminatingState": false,
+        "\u03b5144": "S4",
+        "\u03b52775": "S9"
+    },
+    "S12": {
+        "isTerminatingState": false,
+        "\u03b5456": "S26"
+    },
+    "S8": {
+        "isTerminatingState": false,
+        "\u03b5456": "S12"
+    },
+    "S10": {
+        "isTerminatingState": false,
+        "\u03b5325": "S12"
+    },
+    "S14": {
+        "isTerminatingState": false,
+        "\u03b5654": "S15"
+    },
+    "S15": {
+        "isTerminatingState": false,
+        "\u03b5654": "S16",
+        "\u03b5100": "S24"
+    },
+    "S16": {
+        "isTerminatingState": false,
+        "\u03b5654": "S21"
+    },
+    "S17": {
+        "isTerminatingState": false,
+        "A": "S18"
+    },
+    "S19": {
+        "isTerminatingState": false,
+        "B": "S20"
+    },
+    "S21": {
+        "isTerminatingState": false,
+        "\u03b5144": "S17",
+        "\u03b52775": "S19"
+    },
+    "S22": {
+        "isTerminatingState": false,
+        "S": "S23"
+    },
+    "S18": {
+        "isTerminatingState": false,
+        "\u03b5456": "S22"
+    },
+    "S20": {
+        "isTerminatingState": false,
+        "\u03b5325": "S22"
+    },
+    "S23": {
+        "isTerminatingState": false,
+        "\u03b510": "S24",
+        "\u03b520": "S15"
+    },
+    "S13": {
+        "isTerminatingState": false,
+        "\u03b5404": "S14"
+    },
+    "S25": {
+        "isTerminatingState": false,
+        "\u03b5144": "S3",
+        "\u03b52775": "S13"
+    },
+    "S26": {
+        "isTerminatingState": false,
+        "\u03b515": "S27",
+        "\u03b527": "S25"
+    },
+    "S24": {
+        "isTerminatingState": false,
+        "\u03b5325": "S26"
+    },
+    "S28": {
+        "isTerminatingState": false,
+        "\u03b5654": "S29"
+    },
+    "S29": {
+        "isTerminatingState": false,
+        "A": "S30"
+    },
+    "S30": {
+        "isTerminatingState": false,
+        "B": "S31"
+    },
+    "S31": {
+        "isTerminatingState": false,
+        "C": "S32"
+    },
+    "S27": {
+        "isTerminatingState": false,
+        "\u03b5654": "S28"
+    },
+    "S32": {
         "isTerminatingState": true
     }
 }
