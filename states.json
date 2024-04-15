@@ -2,149 +2,17 @@
     "startingState": "S0",
     "S0": {
         "isTerminatingState": false,
-        "\u03b57": "S1"
+        "a": "S1"
     },
     "S1": {
         "isTerminatingState": false,
-        "A": "S2"
-    },
-    "S3": {
-        "isTerminatingState": false,
-        "\u03b5654": "S12"
-    },
-    "S4": {
-        "isTerminatingState": false,
-        "\u03b5654": "S5"
-    },
-    "S5": {
-        "isTerminatingState": false,
-        "B": "S6",
-        "\u03b5100": "S7"
-    },
-    "S6": {
-        "isTerminatingState": false,
-        "\u03b510": "S7",
-        "\u03b520": "S5"
-    },
-    "S9": {
-        "isTerminatingState": false,
-        "D": "S10"
-    },
-    "S10": {
-        "isTerminatingState": false,
-        "A": "S11"
-    },
-    "S8": {
-        "isTerminatingState": false,
-        "\u03b5404": "S9"
-    },
-    "S12": {
-        "isTerminatingState": false,
-        "\u03b5144": "S4",
-        "\u03b52775": "S8",
-        "\u03b5100": "S14"
-    },
-    "S13": {
-        "isTerminatingState": false,
-        "\u03b510": "S14",
-        "\u03b520": "S12"
-    },
-    "S7": {
-        "isTerminatingState": false,
-        "\u03b5456": "S13"
-    },
-    "S11": {
-        "isTerminatingState": false,
-        "\u03b5325": "S13"
+        "a": "S2"
     },
     "S2": {
         "isTerminatingState": false,
-        "\u03b5654": "S3"
+        "a": "S3"
     },
-    "S15": {
-        "isTerminatingState": false,
-        "\u03b5654": "S16"
-    },
-    "S16": {
-        "isTerminatingState": false,
-        "C": "S17"
-    },
-    "S17": {
-        "isTerminatingState": false,
-        "G": "S18"
-    },
-    "S20": {
-        "isTerminatingState": false,
-        "D": "S21"
-    },
-    "S22": {
-        "isTerminatingState": false,
-        "\u03b5654": "S31"
-    },
-    "S23": {
-        "isTerminatingState": false,
-        "D": "S24"
-    },
-    "S25": {
-        "isTerminatingState": false,
-        "E": "S26"
-    },
-    "S27": {
-        "isTerminatingState": false,
-        "\u03b5144": "S23",
-        "\u03b52775": "S25"
-    },
-    "S28": {
-        "isTerminatingState": false,
-        "\u03b5456": "S32"
-    },
-    "S24": {
-        "isTerminatingState": false,
-        "\u03b5456": "S28"
-    },
-    "S26": {
-        "isTerminatingState": false,
-        "\u03b5325": "S28"
-    },
-    "S29": {
-        "isTerminatingState": false,
-        "F": "S30"
-    },
-    "S31": {
-        "isTerminatingState": false,
-        "\u03b5144": "S27",
-        "\u03b52775": "S29"
-    },
-    "S32": {
-        "isTerminatingState": false,
-        "\u03b5325": "S34"
-    },
-    "S30": {
-        "isTerminatingState": false,
-        "\u03b5325": "S32"
-    },
-    "S21": {
-        "isTerminatingState": false,
-        "\u03b5654": "S22"
-    },
-    "S19": {
-        "isTerminatingState": false,
-        "\u03b5404": "S20"
-    },
-    "S33": {
-        "isTerminatingState": false,
-        "\u03b5144": "S15",
-        "\u03b52775": "S19"
-    },
-    "S34": {
+    "S3": {
         "isTerminatingState": true
-    },
-    "S18": {
-        "isTerminatingState": false,
-        "\u03b5456": "S34"
-    },
-    "S14": {
-        "isTerminatingState": false,
-        "\u03b57": "S33"
     }
 }

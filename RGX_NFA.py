@@ -1,6 +1,6 @@
-import os
 import json
 from graphviz import Digraph
+import os
 import re
 
 class State:
@@ -603,7 +603,7 @@ class NFA:
             i += 1
         return expanded_pattern
 
-def main():
+def main1():
     regex = input("Enter a regular expression: ")
     # trim space
     regex = regex.replace(" ", "")
@@ -619,6 +619,6 @@ def main():
         print("Please enter a valid regex")
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main1()
 #((A)((A)*))

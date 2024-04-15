@@ -1,3 +1,7 @@
+from graphviz import Digraph
+import os
+os.environ["PATH"] += os.pathsep + 'C:/Program Files/Graphviz/bin/'
+import json
 class MIN_DFA:
     def __init__(self, dfa):
         # Initialize the minimized DFA states
@@ -139,12 +143,12 @@ def read_nfa_json(filename):
         states = json.load(f)
     return states
 
-def main():
-    print(read_nfa_json("dfa_states.json"))
+def main3():
+    # print(read_nfa_json("dfa_states.json"))
     minDfa = MIN_DFA(read_nfa_json("dfa_states.json"))
     minDfa.save_as_json('minimized_dfa.json')
     minDfa.save_as_dot('minimized_dfa')
     print("Minimized DFA: ", minDfa.toDict())
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main3()

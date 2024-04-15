@@ -2,6 +2,7 @@ import json
 from collections import deque
 from graphviz import Digraph
 import os
+from graphviz import Graph, render
 
 os.environ["PATH"] += os.pathsep + 'C:/Program Files/Graphviz/bin/'
 
@@ -47,7 +48,7 @@ class DFA:
         actions = set()
         for state in self.in_states.values():
             for transition in state:
-                if transition[0] not in ['ε', 'ε1', 'ε2', 'isTerminatingState']:
+                if transition[0] not in ['ε', 'ε1','i', 'ε2', 'isTerminatingState']:
                     actions.update(transition)
         actions.discard('ε')  # Remove epsilon from actions
         return actions
@@ -67,27 +68,19 @@ class DFA:
         return False
 
     def nfa2dfa(self):
-        # Initialize the DFA states dictionary
         dfa_states = {}
         initial_epsilon_closure = self.epsilon_closure([self.initial_state])
         dfa_states["startingState"] = ' '.join(initial_epsilon_closure)
         dfa_states[' '.join(initial_epsilon_closure)] = {'isTerminatingState': False}
-        # Create a queue to process the states
         state_queue = deque([tuple(initial_epsilon_closure)])
-
-        # While there are unprocessed states in the queue
+        symbols = self.get_all_actions()
+        
         while state_queue:
             current_state = state_queue.popleft()
-
-            # Get all possible symbols for the NFA
-            symbols = self.get_all_actions()
-
-            # Initialize the transition dictionary for the current DFA state
+            
             dfa_states[' '.join(current_state)]['isTerminatingState'] = False
             if self.check_terminating_state(current_state):
                 dfa_states[' '.join(current_state)]["isTerminatingState"] = True
-
-            # For each symbol, find the epsilon closure of the next state
             for symbol in symbols:
                 next_states = []
                 for nfa_state_label in current_state:
@@ -100,15 +93,13 @@ class DFA:
                             next_states.extend(self.epsilon_closure(transition))
                 if next_states == []:
                     continue
-                next_states = list(set(next_states))  # Remove duplicates
-                next_states.sort()  # Sort for consistency
+                next_states = list(set(next_states))  
+                next_states.sort()  
 
-                # Add the next state to the DFA if it's not already in there
                 if ' '.join(next_states) not in dfa_states:
                     dfa_states[' '.join(next_states)] = {'isTerminatingState': False}
                     state_queue.append(next_states)
 
-                # Add the transition from the current DFA state to the next DFA state
                 dfa_states[' '.join(current_state)][symbol] = ' '.join(next_states)
 
         return dfa_states
@@ -128,6 +119,21 @@ class DFA:
                         continue
                     dot.edge(state_label, next_state, label=symbol)
         dot.render(filename, format='png', cleanup=True)
+    def visualize2(self, filename='dfa_graph'):
+        dfa_states = self.nfa2dfa()
+        dot = Graph(engine='neato')
+        for state, transitions in dfa_states.items():
+            if state != "startingState":
+                state_label = state
+                if transitions['isTerminatingState']:
+                    dot.node(state_label, state_label, shape='doublecircle')
+                else:
+                    dot.node(state_label, state_label)
+                for symbol, next_state in transitions.items():
+                    if symbol == 'isTerminatingState':
+                        continue
+                    dot.edge(state_label, next_state, label=symbol)
+        render('neato', 'png', filename)
 
     def save_json(self, filename='dfa_states.json'):
         dfa_states = self.nfa2dfa()
@@ -141,8 +147,7 @@ class DFA:
         with open(filename, 'w') as json_file:
             json.dump(dfa_states_json, json_file, indent=4)
 
-
-def main():
+def main2():
     dfa = DFA()
     dfa.read_json("states.json")
     # print(dfa.in_states)
@@ -150,9 +155,9 @@ def main():
     # print("get_all_actions",dfa.get_all_actions())
     # print(nfa.epsilon_closure(["S4"]))
     # print("fff",dfa.nfa2dfa())
-    dfa.visualize()
     dfa.save_json()
+    dfa.visualize()
     # dfa_out=dfa.nfa2dfa()
     
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main2()
