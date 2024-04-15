@@ -1,4 +1,5 @@
 {
+    "startingState": "S1 S0",
     "S1 S0": {
         "isTerminatingState": false,
         "A": "S12 S13 S14 S15 S16 S19 S2 S20 S3 S33 S4 S5 S7 S8 S9"
